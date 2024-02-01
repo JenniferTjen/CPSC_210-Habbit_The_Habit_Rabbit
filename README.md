@@ -17,6 +17,6 @@ because every single habit that you do, you do it for the sake of your pet rabbi
 
 
 ## User Stories
-* I want to be able to determine the habits that I want to focus on and try to do daily.
-* I want to be able to view the list of pre-determined habits and their progresses towards the goal.
-* I want to be able to match my Habbit's condition to how consistent I am in doing my habits.
+* I want to be able to _determine the habits_ that I want to focus on and try to do daily.
+* I want to be able to _view the list of pre-determined habits_ and their progresses towards the goal.
+* I want to be able to _match my Habbit's condition to how consistent_ I am in doing my habits.
