@@ -294,4 +294,16 @@ class TrackerTest {
         t1.modifyRabbitName("Lala");
         assertEquals("Lala", t1.getRabbitName());
     }
+
+    @Test
+    public void testGetSelectedHabit() {
+        t1.addHabit(h1);
+        t1.addHabit(h2);
+        t1.addHabit(h3);
+        t1.addHabit(h4);
+        t1.selectHabit(h4);
+        assertEquals(h4, t1.getSelected());
+        t1.selectHabit(h2);
+        assertEquals(h2, t1.getSelected());
+    }
 }

@@ -18,10 +18,9 @@ because every single habit that you do, you do it for the sake of your pet rabbi
 
 ## User Stories
 * I want to be able to _determine the habits_ that I want to focus on and try to do daily.
-* I want to be able to _keep track of progress_ to the habits that I have done.
+* I want to be able to _add progress_ to the habits that I have done.
 * I want to be able to _view the list of pre-determined habits_ and their progresses towards the goal.
 * I want to be able to _match my Habbit's condition to how consistent_ I am in doing my habits.
-* I want to be able to _customize my Habbit_.
 
 ## made by Jennifer Tjen
 ## 31849888

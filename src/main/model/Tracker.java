@@ -30,6 +30,11 @@ public class Tracker {
         selected = a;
     }
 
+    // EFFECTS: returns the selected habit
+    public Habit getSelected() {
+        return selected;
+    }
+
     // REQUIRES : selected != null
     // MODIFIES : Habit
     // EFFECTS : modifies the habit title
@@ -78,6 +83,8 @@ public class Tracker {
         return amount;
     }
 
+    // MODIFIES : habit
+    // EFFECTS : increments habit's progress by 1
     public void progressHabit(int y) {
         tracker.get(y).addProgress();
     }
@@ -197,10 +204,16 @@ public class Tracker {
     }
 
     //RABBIT METHODS
+
+    // MODIFIES : Rabbit
+    // EFFECTS : modifies rabbit's name
     public void modifyRabbitName(String x) {
         rabbit.setName(x);
     }
 
+
+    // MODIFIES : Rabbit
+    // EFFECTS : modifies rabbit's fit status
     public void isFit() {
         if (getLifestyleCompleted() >= getLifestyleGoal()) {
             rabbit.yesFit();
@@ -209,6 +222,8 @@ public class Tracker {
         }
     }
 
+    // MODIFIES : Rabbit
+    // EFFECTS : modifies rabbit's diet status
     public void isDietGood() {
         if (getDietCompleted() >= getDietGoal()) {
             rabbit.yesDiet();
@@ -217,6 +232,8 @@ public class Tracker {
         }
     }
 
+    // MODIFIES : Rabbit
+    // EFFECTS : modifies rabbit's social status
     public void isSociable() {
         if (getSocialCompleted() >= getSocialGoal()) {
             rabbit.yesSocial();
@@ -225,6 +242,8 @@ public class Tracker {
         }
     }
 
+    // MODIFIES : Rabbit
+    // EFFECTS : modifies rabbit's entertained status
     public void isEntertained() {
         if (getHobbyCompleted() >= getHobbyGoal()) {
             rabbit.yesEntertained();

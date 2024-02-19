@@ -26,46 +26,68 @@ public class Rabbit {
         name = x;
     }
 
+    // MODIFIES : this
+    // EFFECTS : set fit status to true
     public void yesFit() {
         fit = true;
     }
 
+    // MODIFIES : this
+    // EFFECTS : set fit status to false
     public void notFit() {
         fit = false;
     }
 
+    // MODIFIES : this
+    // EFFECTS : set diet status to true
     public void yesDiet() {
         dietGood = true;
     }
 
+    // MODIFIES : this
+    // EFFECTS : set diet status to false
     public void notDiet() {
         dietGood = false;
     }
 
+    // MODIFIES : this
+    // EFFECTS : set social status to true
     public void yesSocial() {
         notLonely = true;
     }
 
+    // MODIFIES : this
+    // EFFECTS : set social status to false
     public void notSocial() {
         notLonely = false;
     }
 
+    // MODIFIES : this
+    // EFFECTS : set entertained status to true
     public void yesEntertained() {
         entertained = true;
     }
 
+    // MODIFIES : this
+    // EFFECTS : set fit entertained to false
     public void notEntertained() {
         entertained = false;
     }
 
+    // MODIFIES : this
+    // EFFECTS : set happiness level
     public void setHappiness(float i) {
         happiness = i;
     }
 
+    // MODIFIES : this
+    // EFFECTS : set happiness max amount
     public void setMaxHappiness(float k) {
         maxHappiness = k;
     }
 
+    // MODIFIES : this
+    // EFFECTS : set happiness status
     public void setHappinessStatus(boolean s) {
         happy = s;
     }
