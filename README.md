@@ -21,6 +21,9 @@ because every single habit that you do, you do it for the sake of your pet rabbi
 * I want to be able to _add progress_ to the habits that I have done.
 * I want to be able to _view the list of pre-determined habits_ and their progresses towards the goal.
 * I want to be able to _match my Habbit's condition to how consistent_ I am in doing my habits.
+* When I select the quit option from the application menu, I want to _be reminded to save my habits to file_ and have 
+  the option to do so or not.
+* As a user, when I start the application, I want to be _given the option to load my habits progression_ from file.
 
 ## made by Jennifer Tjen
 ## 31849888

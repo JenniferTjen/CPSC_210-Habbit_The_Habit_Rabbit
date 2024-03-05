@@ -1,8 +1,12 @@
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import persistence.Writable;
+
 import java.util.ArrayList;
 
-public class Tracker {
+public class Tracker implements Writable {
     private ArrayList<Habit> tracker;
     private Habit selected;
     private Rabbit rabbit;
@@ -302,5 +306,35 @@ public class Tracker {
 
     public boolean getRabbitHappinessStatus() {
         return rabbit.getHappyStatus();
+    }
+
+    public Rabbit getRabbit() {
+        return rabbit;
+    }
+
+    @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("rabbit", getRabbitName());
+        json.put("habit", habitsToJson());
+        json.put("dietGood", getRabbitDiet());
+        json.put("fit", getRabbitFit());
+        json.put("entertained", getRabbitEntertained());
+        json.put("notLonely", getRabbitSocial());
+        json.put("happiness", getRabbitHappiness());
+        json.put("maxHappiness", getRabbitMaxHappiness());
+        json.put("isHappy", getRabbitHappinessStatus());
+        return json;
+    }
+
+    // EFFECTS: returns habits in this tracker as a JSON array
+    private JSONArray habitsToJson() {
+        JSONArray jsonArray = new JSONArray();
+
+        for (Habit h : getHabits()) {
+            jsonArray.put(h.toJson());
+        }
+
+        return jsonArray;
     }
 }

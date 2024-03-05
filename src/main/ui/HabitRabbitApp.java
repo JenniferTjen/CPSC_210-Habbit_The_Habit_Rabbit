@@ -2,10 +2,15 @@ package ui;
 
 import model.Habit;
 import model.Tracker;
+import persistence.JsonReader;
+import persistence.JsonWriter;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class HabitRabbitApp {
+    private static final String JSON_STORE = "./data/habbit.json";
     private Tracker account;
     private Scanner input;
     private String rabbitName;
@@ -13,9 +18,13 @@ public class HabitRabbitApp {
     private boolean valid;
     int option;
     int selection;
+    private JsonWriter jsonWriter;
+    private JsonReader jsonReader;
 
     // EFFECTS: runs the Habit Rabbit application
-    public HabitRabbitApp() {
+    public HabitRabbitApp() throws FileNotFoundException {
+        jsonWriter = new JsonWriter(JSON_STORE);
+        jsonReader = new JsonReader(JSON_STORE);
         runApp();
     }
 
@@ -101,6 +110,10 @@ public class HabitRabbitApp {
             doAddHabits();
         } else if (command.equals("v")) {
             doModifyHabits();
+        } else if (command.equals("s")) {
+            saveTracker();
+        } else if (command.equals("l")) {
+            loadTracker();
         } else {
             System.out.println("Selection not valid; try again!");
         }
@@ -117,6 +130,8 @@ public class HabitRabbitApp {
         System.out.println("\tr -> view and modify rabbit");
         System.out.println("\tv -> view and modify habits");
         System.out.println("\th -> add habits");
+        System.out.println("\ts -> save progress to file");
+        System.out.println("\tl -> load progress from file");
         System.out.println("\tq -> log out");
     }
 
@@ -377,5 +392,28 @@ public class HabitRabbitApp {
         System.out.println("\t2 -> Social");
         System.out.println("\t3 -> Diet");
         System.out.println("\t4 -> Hobby");
+    }
+
+    // EFFECTS: saves the workroom to file
+    public void saveTracker() {
+        try {
+            jsonWriter.open();
+            jsonWriter.write(account);
+            jsonWriter.close();
+            System.out.println("Saved " + account.getRabbitName() + " to " + JSON_STORE);
+        } catch (FileNotFoundException e) {
+            System.out.println("Unable to write to file: " + JSON_STORE);
+        }
+    }
+
+    // MODIFIES : this
+    // EFFECTS: loads tracker from file
+    private void loadTracker() {
+        try {
+            account = jsonReader.read();
+            System.out.println("Loaded " + account.getRabbitName() + " from " + JSON_STORE);
+        } catch (IOException e) {
+            System.out.println("Unable to read from file: " + JSON_STORE);
+        }
     }
 }

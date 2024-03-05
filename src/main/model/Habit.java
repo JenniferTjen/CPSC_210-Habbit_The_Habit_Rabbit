@@ -1,8 +1,11 @@
 package model;
 
+import org.json.JSONObject;
+import persistence.Writable;
+
 import java.util.ArrayList;
 
-public class Habit {
+public class Habit implements Writable {
     private String title;
     private String desc;
     private int perDay;
@@ -71,6 +74,14 @@ public class Habit {
         desc = p;
     }
 
+    public void setProgress(int i) {
+        progress = i;
+    }
+
+    public void setFinished(boolean b) {
+        finished = b;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -89,5 +100,17 @@ public class Habit {
 
     public String getCategory() {
         return category;
+    }
+
+    @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("title", title);
+        json.put("progress", progress);
+        json.put("desc", desc);
+        json.put("perDay", perDay);
+        json.put("category", category);
+        json.put("finished", finished);
+        return json;
     }
 }
