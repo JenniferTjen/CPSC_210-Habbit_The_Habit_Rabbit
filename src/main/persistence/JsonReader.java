@@ -79,18 +79,10 @@ public class JsonReader {
         int happiness = jsonObject.getInt("happiness");
         int maxHappiness = jsonObject.getInt("maxHappiness");
         boolean isHappy = jsonObject.getBoolean("isHappy");
-        if (fit) {
-            tr.getRabbit().yesFit();
-        }
-        if (dietGood) {
-            tr.getRabbit().yesDiet();
-        }
-        if (entertained) {
-            tr.getRabbit().yesEntertained();
-        }
-        if (notLonely) {
-            tr.getRabbit().yesSocial();
-        }
+        tr.getRabbit().setDiet(dietGood);
+        tr.getRabbit().setFit(fit);
+        tr.getRabbit().setEntertained(entertained);
+        tr.getRabbit().setSocial(notLonely);
         tr.getRabbit().setHappiness(happiness);
         tr.getRabbit().setMaxHappiness(maxHappiness);
         tr.getRabbit().setHappinessStatus(isHappy);

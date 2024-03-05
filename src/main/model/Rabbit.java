@@ -27,52 +27,29 @@ public class Rabbit {
     }
 
     // MODIFIES : this
-    // EFFECTS : set fit status to true
-    public void yesFit() {
-        fit = true;
+    // EFFECTS : set fit status to corresponding situation
+    public void setFit(boolean f) {
+        fit = f;
     }
 
     // MODIFIES : this
-    // EFFECTS : set fit status to false
-    public void notFit() {
-        fit = false;
+    // EFFECTS : set diet status to corresponding situation
+    public void setDiet(boolean f) {
+        dietGood = f;
     }
 
     // MODIFIES : this
-    // EFFECTS : set diet status to true
-    public void yesDiet() {
-        dietGood = true;
+    // EFFECTS : set social status to corresponding situation
+    public void setSocial(boolean f) {
+        notLonely = f;
     }
 
     // MODIFIES : this
-    // EFFECTS : set diet status to false
-    public void notDiet() {
-        dietGood = false;
+    // EFFECTS : set entertained status to corresponding situation
+    public void setEntertained(boolean f) {
+        entertained = f;
     }
 
-    // MODIFIES : this
-    // EFFECTS : set social status to true
-    public void yesSocial() {
-        notLonely = true;
-    }
-
-    // MODIFIES : this
-    // EFFECTS : set social status to false
-    public void notSocial() {
-        notLonely = false;
-    }
-
-    // MODIFIES : this
-    // EFFECTS : set entertained status to true
-    public void yesEntertained() {
-        entertained = true;
-    }
-
-    // MODIFIES : this
-    // EFFECTS : set fit entertained to false
-    public void notEntertained() {
-        entertained = false;
-    }
 
     // MODIFIES : this
     // EFFECTS : set happiness level

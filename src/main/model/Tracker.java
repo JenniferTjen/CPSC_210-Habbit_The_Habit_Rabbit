@@ -220,9 +220,9 @@ public class Tracker implements Writable {
     // EFFECTS : modifies rabbit's fit status
     public void isFit() {
         if (getLifestyleCompleted() >= getLifestyleGoal()) {
-            rabbit.yesFit();
+            rabbit.setFit(true);
         } else {
-            rabbit.notFit();
+            rabbit.setFit(false);
         }
     }
 
@@ -230,9 +230,9 @@ public class Tracker implements Writable {
     // EFFECTS : modifies rabbit's diet status
     public void isDietGood() {
         if (getDietCompleted() >= getDietGoal()) {
-            rabbit.yesDiet();
+            rabbit.setDiet(true);
         } else {
-            rabbit.notDiet();
+            rabbit.setDiet(false);
         }
     }
 
@@ -240,9 +240,9 @@ public class Tracker implements Writable {
     // EFFECTS : modifies rabbit's social status
     public void isSociable() {
         if (getSocialCompleted() >= getSocialGoal()) {
-            rabbit.yesSocial();
+            rabbit.setSocial(true);
         } else {
-            rabbit.notSocial();
+            rabbit.setSocial(false);
         }
     }
 
@@ -250,9 +250,9 @@ public class Tracker implements Writable {
     // EFFECTS : modifies rabbit's entertained status
     public void isEntertained() {
         if (getHobbyCompleted() >= getHobbyGoal()) {
-            rabbit.yesEntertained();
+            rabbit.setEntertained(true);
         } else {
-            rabbit.notEntertained();
+            rabbit.setEntertained(false);
         }
     }
 
