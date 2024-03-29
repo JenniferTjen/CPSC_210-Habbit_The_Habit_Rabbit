@@ -25,5 +25,15 @@ because every single habit that you do, you do it for the sake of your pet rabbi
   the option to do so or not.
 * As a user, when I start the application, I want to be _given the option to load my habits progression_ from file.
 
+# Instructions for Grader
+- You can generate the first required action related to the user story "adding multiple Xs to a Y" by
+  selecting the "Add Habit" option in the main menu to add more habits to keep track of.
+- You can generate the second required action related to the user story "adding multiple Xs to a Y" by
+  adding progress to a habit under "Modify Habit" and witness changes upon the rabbit under "View Rabbit".
+- You can locate my visual component by locating rabbits in most of my sections, while spotting a difference
+  in the rabbit according to the user's habit progression.
+- You can save the state of my application by pressing the save button in the main menu.
+- You can reload the state of my application by pressing the load button in the main menu.
+
 ## made by Jennifer Tjen
 ## 31849888

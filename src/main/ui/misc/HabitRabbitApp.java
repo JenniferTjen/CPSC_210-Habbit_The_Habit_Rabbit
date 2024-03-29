@@ -1,4 +1,4 @@
-package ui;
+package ui.misc;
 
 import model.Habit;
 import model.Tracker;
@@ -30,6 +30,7 @@ public class HabitRabbitApp {
 
     // EFFECTS: processes the main program and introduction
     public void runApp() {
+
         boolean keepGoing = true;
         String command;
         valid = true;
