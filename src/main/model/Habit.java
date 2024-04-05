@@ -38,6 +38,7 @@ public class Habit implements Writable {
     // EFFECTS : increments the progress of the habit by 1
     public void addProgress() {
         progress++;
+        EventLog.getInstance().logEvent(new Event("Habit " + getTitle() + " Progress +1"));
     }
 
     // MODIFIES : this

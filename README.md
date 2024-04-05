@@ -35,5 +35,26 @@ because every single habit that you do, you do it for the sake of your pet rabbi
 - You can save the state of my application by pressing the save button in the main menu.
 - You can reload the state of my application by pressing the load button in the main menu.
 
+# Phase 4: Task 2
+Fri Apr 05 14:20:56 PDT 2024
+Rabbit JENN Created
+Fri Apr 05 14:21:09 PDT 2024
+New Habit Gym Created!
+Fri Apr 05 14:21:13 PDT 2024
+Habit Gym Progress +1
+Fri Apr 05 14:21:14 PDT 2024
+Habit Gym Progress +1
+Fri Apr 05 14:21:26 PDT 2024
+New Habit eat healthy Created!
+Fri Apr 05 14:21:29 PDT 2024
+Habit eat healthy Progress +1
+Fri Apr 05 14:21:29 PDT 2024
+Habit eat healthy Progress +1
+Fri Apr 05 14:21:35 PDT 2024
+Habit eat healthy Progress +1
+Fri Apr 05 14:21:35 PDT 2024
+Habit eat healthy Progress +1
+
+
 ## made by Jennifer Tjen
 ## 31849888

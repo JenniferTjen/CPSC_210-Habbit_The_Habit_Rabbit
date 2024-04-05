@@ -16,6 +16,7 @@ public class Tracker implements Writable {
     public Tracker(String j) {
         this.tracker = new ArrayList<>();
         this.rabbit = new Rabbit(j);
+        EventLog.getInstance().logEvent(new Event("Rabbit " + j.toUpperCase() + " Created"));
     }
 
     public ArrayList<Habit> getHabits() {
@@ -25,6 +26,7 @@ public class Tracker implements Writable {
     // EFFECTS: adds the habit into the list
     public void addHabit(Habit h) {
         tracker.add(h);
+        EventLog.getInstance().logEvent(new Event("New Habit " + h.getTitle() + " Created!"));
     }
 
     // REQUIRES : selected != null
