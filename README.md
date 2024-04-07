@@ -1,4 +1,4 @@
-# Habbit the model.Habit Rabbit
+# Habbit the Habit Rabbit
 
 ## A rabbit that keeps you accountable!
 
