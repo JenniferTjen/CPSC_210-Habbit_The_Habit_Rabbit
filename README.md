@@ -55,6 +55,12 @@ Habit eat healthy Progress +1
 Fri Apr 05 14:21:35 PDT 2024
 Habit eat healthy Progress +1
 
+# Phase 4: Task 3
+If I were to have more time to do my project, I would refactor my code by applying Singleton Pattern in Rabbit.
+This is in order to make sure that I only have one Rabbit instantiated at a time for a tracker. By using this pattern,
+my codes will be more secured in a way that my app can only have one instance throughout the application, and avoid
+multiple instances being created and causing m program to be less secure.
+
 
 ## made by Jennifer Tjen
 ## 31849888
